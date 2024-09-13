@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("/Css-Hover-Effect/images/aperture-vintage-SshYpuf607g-unsplash.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+
+}
+.middle-part{
+    /* background-color: aqua; */
+    height: 60vmin;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+
+
+}
+.middle-part .item{
+    height: 50vmin;
+    width: 50vmin;
+    display: flex;
+    justify-content: space-around;
+
+}
+.middle-part .item img{
+    height: 48vmin;
+    width: 48vmin;
+    object-fit: cover;
+    position: absolute;
+    transition: all 0.7s;
+    transform: rotateY(0deg);
+}
+#moon img{
+    height: 53vmin;
+    width: 53vmin;
+    object-fit: cover;
+    z-index: 2;
+    bottom: 25% ;
+    left: 37%;
+}
+#earth img{
+    left: 20%;
+}
+#mars img{
+    left: 1%;
+    /* transform: rotate(10deg); */
+}
+#jupiter img{
+    z-index: 1;
+    right: 20%;
+}
+#venus img{
+    right: 1%;
+
+}
+
+.middle-part:hover .item img{
+    filter: grayscale(1) blur(10px);
+}
+.middle-part:hover .item:hover img:hover{
+    filter: none;
+    transform: rotate(30deg);
+}
